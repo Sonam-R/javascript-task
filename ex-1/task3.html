@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<script>
+		var user1 = new Person("test1" , 40);
+		var user2 = new Person("test2" , 40);
+
+		function Person(name,age){
+			this.name = name;
+			this.age = age;
+			this.compare = function(abc){
+				if (this.age > abc.age){
+					return this.name + '' + " is older than " + abc.name;
+				}else if (this.age == abc.age){
+					return this.name + '' + " is equal to " + abc.name;
+				}
+				else{
+					return abc.name + '' + " is older than " + this.name;
+				}
+			}
+		}
+		alert(user1.compare(user2));
+	</script>
+</body>
+</html>
